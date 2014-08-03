@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Jarvis</string>
+    <string name="title_videos">Videos</string>
+    <string name="title_musique">Musique</string>
+    <string name="title_domotique">Domotique</string>
+	<string name="title_action_detail">Videos</string>
+	
+    <color name="list_background">#FF6600</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>
