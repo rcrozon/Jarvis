@@ -75,14 +75,13 @@ public class ActionListFragment extends ListFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Option o1 = new Option("Videos");
-        Option o2 = new Option("Musique");
-        Option o3 = new Option("Domotique");
+        Option o1 = new Option(1, "Videos");
+        Option o2 = new Option(2, "Musique");
+        Option o3 = new Option(3, "Domotique");
         List<Option> lOptionList = new ArrayList<Option>();
         lOptionList.add(o1);
         lOptionList.add(o2);
         lOptionList.add(o3);
-        // TODO: replace with a real list adapter.
         OptionAdapter myAdapter = new OptionAdapter(this.getActivity(), R.layout.option, lOptionList);
         setListAdapter(myAdapter);
     }

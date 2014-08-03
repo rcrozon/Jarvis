@@ -13,11 +13,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-public class OptionAdapter extends ArrayAdapter<Option> {
+public class DetailAdapter extends ArrayAdapter<Detail> {
 
 	Context moContext;
 	
-	public OptionAdapter(Context context, int textViewResourceId, List<Option> data) {
+	public DetailAdapter(Context context, int textViewResourceId, List<Detail> data) {
 		super(context, textViewResourceId, data);
 		this.moContext = context;
 	}
@@ -30,21 +30,12 @@ public class OptionAdapter extends ArrayAdapter<Option> {
 			v = vi.inflate(R.layout.option, null);
 		}
 		if (position < this.getCount()) {
-			Option oOption = this.getItem(position);
-			if (oOption != null) {
+			Detail oDetail = this.getItem(position);
+			if (oDetail != null) {
 
-				TextView vwLibelle = (TextView) v.findViewById(R.id.txtLibelle);
+				TextView vwLibelle = (TextView) v.findViewById(R.id.txtItemLibelle);
 				if (vwLibelle != null) {
-					vwLibelle.setText(oOption.getMsLibelle());
-				}
-				ImageView vwImg	= (ImageView)v.findViewById(R.id.imageViewOption);
-				if(vwImg != null){
-					switch(oOption.getId()){
-						case 1 : vwImg.setBackgroundResource(R.drawable.video);break;
-						case 2 : vwImg.setBackgroundResource(R.drawable.musique);break;
-						case 3 : vwImg.setBackgroundResource(R.drawable.video);break;
-						default : vwImg.setBackgroundResource(R.drawable.ic_launcher);
-					}
+					vwLibelle.setText(oDetail.getMsLibelle());
 				}
 			}
 		}

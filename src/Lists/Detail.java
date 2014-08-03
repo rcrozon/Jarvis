@@ -1,20 +1,13 @@
 package Lists;
 
-public class Option {
+public class Detail {
 
 	private String msLibelle ;
 	private int id;
 	
-	public Option(int id, String psLibelle){
+	public Detail(int id, String psLibelle){
 		this.msLibelle = psLibelle;
 		this.id = id;
-	}
-	
-	/**
-	 * 
-	 */
-	public String toString(){
-		return msLibelle;
 	}
 	
 	/**
@@ -32,19 +25,17 @@ public class Option {
 	}
 
 	/**
-	 * 
-	 * @return
+	 * @return the msLibelle
 	 */
-	public String getMsLibelle(){
+	public String getMsLibelle() {
 		return msLibelle;
 	}
-	
+
 	/**
-	 * 
-	 * @param psLibelle
+	 * @param msLibelle the msLibelle to set
 	 */
-	public void setMsLibelle(String psLibelle){
-		this.msLibelle = psLibelle;
+	public void setMsLibelle(String msLibelle) {
+		this.msLibelle = msLibelle;
 	}
 
 }

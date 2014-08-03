@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import Lists.Detail;
+
 /**
  * Helper class for providing sample content for user interfaces created by
  * Android template wizards.
@@ -25,9 +27,9 @@ public class DummyContent {
 
     static {
         // Add 3 sample items.
-        addItem(new DummyItem("1", "Item 1"));
-        addItem(new DummyItem("2", "Item 2"));
-        addItem(new DummyItem("3", "Item 3"));
+        addItem(new DummyItem("1", "Item 1", new Detail(1, "File 1")));
+        addItem(new DummyItem("2", "Item 2", new Detail(2, "File 2")));
+        addItem(new DummyItem("3", "Item 3", new Detail(3, "File 3")));
     }
 
     private static void addItem(DummyItem item) {
@@ -41,8 +43,9 @@ public class DummyContent {
     public static class DummyItem {
         public String id;
         public String content;
+        public Detail detail;
 
-        public DummyItem(String id, String content) {
+        public DummyItem(String id, String content, Detail detail) {
             this.id = id;
             this.content = content;
         }

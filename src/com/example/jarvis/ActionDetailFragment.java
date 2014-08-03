@@ -1,12 +1,17 @@
 package com.example.jarvis;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import Lists.Detail;
+import Lists.DetailAdapter;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-
+import android.widget.ListView;
 
 import com.example.jarvis.dummy.DummyContent;
 
@@ -54,7 +59,17 @@ public class ActionDetailFragment extends Fragment {
 
         // Show the dummy content as text in a TextView.
         if (mItem != null) {
-            ((TextView) rootView.findViewById(R.id.action_detail)).setText(mItem.content);
+        	ListView vwItems = (ListView) rootView.findViewById(R.id.listViewItems);
+        	if (vwItems != null){
+        		List<Detail> lItems = new ArrayList<Detail>();
+        		lItems.add(new Detail(1, "file 1"));
+        		lItems.add(new Detail(2, "file 2"));
+        		lItems.add(new Detail(3, "file 3"));
+        		lItems.add(new Detail(4, "file 4"));
+        		vwItems.setAdapter(new DetailAdapter(this.getActivity(), R.layout.detail, lItems));
+        	}else{
+        		Log.i("LIST", "list null");
+        	}
         }
 
         return rootView;
