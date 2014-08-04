@@ -60,6 +60,7 @@ public class ActionListActivity extends FragmentActivity
      */
     @Override
     public void onItemSelected(String id) {
+    	
         if (mTwoPane) {
             // In two-pane mode, show the detail view in this activity by
             // adding or replacing the detail fragment using a

@@ -6,11 +6,5 @@
     tools:context="com.example.jarvis.ActionDetailActivity"
     tools:ignore="MergeRootFrame" >
 
-    <ListView
-        android:id="@+id/listViewItems"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-    </ListView>
-
 </FrameLayout>
 

@@ -2,8 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/action_list"
     android:name="com.example.jarvis.ActionListFragment"
-    android:layout_width="match_parent"
+    android:layout_width="100dp"
     android:layout_height="match_parent"
     tools:context="com.example.jarvis.ActionListActivity"
-    tools:layout="@android:layout/list_content" />
+    tools:layout="@android:layout/layout_gallery" />
 

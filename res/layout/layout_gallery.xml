@@ -7,12 +7,27 @@
     tools:context="com.example.jarvis.ItemDetailActivity"
     tools:ignore="MergeRootFrame" >
 
+    <ListView 
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        
+    </ListView>
     <GridView
         android:id="@+id/gridView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:numColumns="3" >
+        
+        <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
     </GridView>
 
+    
+    
 </FrameLayout>
 

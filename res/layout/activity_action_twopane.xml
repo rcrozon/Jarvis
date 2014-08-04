@@ -23,7 +23,7 @@
     <fragment
         android:id="@+id/action_list"
         android:name="com.example.jarvis.ActionListFragment"
-        android:layout_width="120dp"
+        android:layout_width="100dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         tools:layout="@android:layout/list_content" />

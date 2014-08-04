@@ -2,15 +2,15 @@ package Lists;
 
 import java.util.List;
 
-import com.example.jarvis.R;
-
+import android.app.ActionBar.LayoutParams;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.jarvis.R;
 
 
 public class DetailAdapter extends ArrayAdapter<Detail> {
@@ -27,7 +27,7 @@ public class DetailAdapter extends ArrayAdapter<Detail> {
 		View v = convertView;
 		if (v == null) {
 			LayoutInflater vi = (LayoutInflater) moContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			v = vi.inflate(R.layout.option, null);
+			v = vi.inflate(R.layout.detail, null);
 		}
 		if (position < this.getCount()) {
 			Detail oDetail = this.getItem(position);
@@ -39,6 +39,8 @@ public class DetailAdapter extends ArrayAdapter<Detail> {
 				}
 			}
 		}
+//		LayoutParams lp = new LayoutParams(100, 50);
+//		v.setLayoutParams(lp);
 		return v;
 	}
 }

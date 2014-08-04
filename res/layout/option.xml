@@ -22,7 +22,7 @@
         android:layout_alignParentLeft="true"/>
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/imageViewFleche"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
