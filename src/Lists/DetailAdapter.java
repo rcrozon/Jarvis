@@ -2,6 +2,7 @@ package Lists;
 
 import java.util.List;
 
+import Entities.Detail;
 import android.app.ActionBar.LayoutParams;
 import android.content.Context;
 import android.view.LayoutInflater;

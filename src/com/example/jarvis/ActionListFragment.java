@@ -1,18 +1,12 @@
 package com.example.jarvis;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import Lists.Option;
+import Entities.Option;
 import Lists.OptionAdapter;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
-import com.example.jarvis.dummy.DummyContent;
 
 /**
  * A list fragment representing a list of Actions. This fragment
@@ -61,6 +55,7 @@ public class ActionListFragment extends ListFragment {
     private static Callbacks sDummyCallbacks = new Callbacks() {
         @Override
         public void onItemSelected(String id) {
+        	
         }
     };
 
@@ -74,15 +69,7 @@ public class ActionListFragment extends ListFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        Option o1 = new Option(1, "Videos");
-        Option o2 = new Option(2, "Musique");
-        Option o3 = new Option(3, "Domotique");
-        List<Option> lOptionList = new ArrayList<Option>();
-        lOptionList.add(o1);
-        lOptionList.add(o2);
-        lOptionList.add(o3);
-        OptionAdapter myAdapter = new OptionAdapter(this.getActivity(), R.layout.option, lOptionList);
+        OptionAdapter myAdapter = new OptionAdapter(this.getActivity(), R.layout.option, Option.getOptionsList());
         setListAdapter(myAdapter);
     }
 
@@ -123,7 +110,7 @@ public class ActionListFragment extends ListFragment {
 
         // Notify the active callbacks interface (the activity, if the
         // fragment is attached to one) that an item has been selected.
-        mCallbacks.onItemSelected(DummyContent.ITEMS.get(position).id);
+        mCallbacks.onItemSelected(Option.getOptionsList().get(position).getMsLibelle());
     }
 
     @Override

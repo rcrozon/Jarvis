@@ -1,6 +1,9 @@
-package DatabaseManager;
+package DatabaseManager.TablesSQLManager;
 
+import DatabaseManager.CConstantesSQL;
+import DatabaseManager.CGenericDatabaseManager;
 import Entities.Device;
+import Entities.Option;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -11,12 +14,12 @@ public class CDeviceSQLManager extends CGenericDatabaseManager{
 		super(context);
 	}
 
-	public static long insert(Device oDevice){
+	public static long insert(Device poDevice){
 		ContentValues values = new ContentValues();
-		values.put(CConstantesSQL.DEVICE_ID, oDevice.getMiId());
-		values.put(CConstantesSQL.DEVICE_LIB, oDevice.getMsLibelle());
-		values.put(CConstantesSQL.DEVICE_DESCRI, oDevice.getMsDescription());
-		return bdd.insert(CConstantesSQL.DEVICE_TABLE, null, values);
+		values.put(CConstantesSQL.DEVICE_ID, poDevice.getMiId());
+		values.put(CConstantesSQL.DEVICE_LIB, poDevice.getMsLibelle());
+		values.put(CConstantesSQL.DEVICE_DESCRI, poDevice.getMsDescription());
+		return bdd.insert(CConstantesSQL.TABLE_DEVICE, null, values);
 	}
 	
 	/**

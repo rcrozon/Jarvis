@@ -2,32 +2,67 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal" >
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:id="@+id/layoutMenu"
+	    android:layout_width="fill_parent"
+	    android:layout_height="25dp"
+	    android:orientation="horizontal"
+	    android:background="@drawable/gradient_menu" 
+	    android:layout_gravity="right">
+    	    
+        <Button
+		    android:id="@+id/buttonPCItem"
+		    android:layout_width="27dp"
+		    android:layout_height="21dp" 
+		    android:layout_marginLeft="2dp"
+		    android:layout_marginRight="2dp" 
+		    android:background="@drawable/send_to_pc"
+		    style="@attr/buttonBarButtonStyle"
+		    />
+        
+        <Button
+		    android:id="@+id/buttonTVItem"
+		    android:layout_width="27dp"
+		    android:layout_height="21dp" 
+		    android:layout_marginLeft="2dp"
+		    android:layout_marginRight="2dp"
+		    android:background="@drawable/send_to_tv"
+		    style="@attr/buttonBarButtonStyle"/>
+        
+    </LinearLayout>
 
-   	<LinearLayout
-   	    android:id="@+id/linearLayout"
-   	    android:layout_width="120dp"
-   	    android:layout_height="match_parent"
-   	    android:orientation="vertical" >
-	    
-		<ListView
-		    android:id="@+id/listViewFiles"
-		    android:layout_width="match_parent"
-		    android:layout_height="425dp" />
-		
-		<Button
-		    android:id="@+id/buttonAddItem"
-		    android:layout_width="match_parent"
-		    android:layout_height="match_parent" />
-		
-	</LinearLayout>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="horizontal" >
 	
-	<GridView
-        android:id="@+id/gridView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:numColumns="3" >
-	    
-	</GridView>
+    	<LinearLayout
+	   	    android:id="@+id/linearLayout"
+	   	    android:layout_width="120dp"
+	   	    android:layout_height="match_parent"
+	   	    android:orientation="vertical" >
+		    
+			<ListView
+			    android:id="@+id/listViewFiles"
+			    android:layout_width="match_parent"
+			    android:layout_height="425dp" />
+			
+			<Button
+			    android:id="@+id/buttonAddItem"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent" />
+			
+		</LinearLayout>
+	
+		<GridView
+	        android:id="@+id/gridView"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:numColumns="3" >
+		    
+		</GridView>
+	</LinearLayout> 
 
-</LinearLayout> 
+</LinearLayout>

@@ -1,27 +1,25 @@
-package Lists;
+package Entities;
 
-public class Detail {
+public class Detail extends Entity{
 
-	private String msLibelle ;
-	private int id;
 	
-	public Detail(int id, String psLibelle){
+	public Detail(int miId, String psLibelle){
 		this.msLibelle = psLibelle;
-		this.id = id;
+		this.miId = miId;
 	}
 	
 	/**
-	 * @return the id
+	 * @return the miId
 	 */
-	public int getId() {
-		return id;
+	public int getmiId() {
+		return miId;
 	}
 
 	/**
-	 * @param id the id to set
+	 * @param miId the miId to set
 	 */
-	public void setId(int id) {
-		this.id = id;
+	public void setmiId(int miId) {
+		this.miId = miId;
 	}
 
 	/**

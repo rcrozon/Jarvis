@@ -10,4 +10,8 @@
     <color name="list_background">#FF6600</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    <color name="grey_anth">#3b3b3b</color>
+    <color name="grey_anth_light">#424242</color>
+    <color name="green">#457b06</color>
+    <color name="green_light">#579311</color>
 </resources>
